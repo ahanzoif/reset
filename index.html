@@ -4,551 +4,405 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Reset - Progress. Dicipline. Freedom</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+
+      :root {
+        --background: #f8fafc;
+        --surface: #ffffff;
+        --surface-elevated: #ffffff;
+        --border: #e2e8f0;
+        --text-primary: #0f172a;
+        --text-secondary: #64748b;
+        --primary: #4f46e5;
+        --primary-hover: #4338ca;
+        --success: #16a34a;
+        --warning: #d97706;
+        --danger: #dc2626;
+      }
+
+      body {
+        background-color: var(--background);
+        color: var(--text-primary);
+      }
+
+      .page {
+        display: none;
+        width: 100%;
+        height: calc(100vh - 80px);
+      }
+
+      .page.active {
+        display: block;
+      }
+    </style>
   </head>
   <body>
-
     <!-- Header -->
 
     <header>
-
       <nav>
-
         <!-- logo -->
 
         <div class="nav-left">
-          <a href="#home" class="logo">
-            RESET
-          </a>
+          <a href="#home" class="logo" data-page="home"> RESET </a>
         </div>
 
         <!-- Navigation -->
 
         <div class="nav-center">
-          <a href="#features">Features</a>
-          <a href="#work">How it Works</a>
-          <a href="#benefits">Benefits</a>
-          <a href="#testimonials">Testimonials</a>
-          <a href="#faq">FAQ</a>
+          <a href="#features" data-page="features">Features</a>
+          <a href="#work" data-page="work">How it Works</a>
+          <a href="#benefits" data-page="benefits">Benefits</a>
+          <a href="#testimonials" data-page="testimonials">Testimonials</a>
+          <a href="#faq" data-page="faq">FAQ</a>
         </div>
 
         <!-- Navigation Action -->
 
         <div class="nav-right">
           <a href="#login">Login</a>
-          <a href="#get-started">Get Started</a>
+          <a href="#get-started" data-page="get-started">Get Started</a>
         </div>
-        
       </nav>
-
     </header>
 
-<!-- Main -->
+    <!-- Main -->
 
-  <main>
-      
-    <!-- hero section -->
+    <main>
+      <!-- hero section -->
 
-  <section class="hero" id="home">
+      <section class="page hero active" id="home">
+        <div class="hero-content">
+          <p class="tagline">Your Journey. Your Progress. Your Best Self.</p>
 
-  <div class="hero-content">
+          <h1>
+            Track Any Habit.
+            <br />
+            Build Consistency.
+            <br />
+            Transform Your Life.
+          </h1>
 
-    <p class="tagline">
-      Your Journey. Your Progress. Your Best Self.
-    </p>
+          <p class="hero-description">
+            RESET is your all-in-one progress tracker. Set goals, build habits,
+            stay consistent, and become the best version of yourself.
+          </p>
 
-    <h1>Track Any Habit.
-      <br>
-      Build Consistency.
-      <br>
-      Transform Your Life.
-    </h1>
+          <div class="hero-buttons">
+            <a href="#get-started" class="primary-btn"> Get Started </a>
 
-    <p class="hero-description">
-      RESET is your all-in-one progress tracker.
-      Set goals, build habits, stay consistent,
-      and become the best version of yourself.
-    </p>
+            <a href="#work" class="secondary-btn"> See How It Works </a>
+          </div>
 
-    <div class="hero-buttons">
+          <div class="trust">
+            <p>Trusted by Students & Dreamers.</p>
+          </div>
 
-      <a href="#get-started" class="primary-btn">
-        Get Started
-      </a>
+          <div class="preview">
+            <p>RESET Dashboard Preview</p>
+          </div>
+        </div>
+      </section>
 
-      <a href="#work" class="secondary-btn">
-        See How It Works
-      </a>
+      <!-- features section  -->
 
-    </div>
+      <section class="page" id="features">
+        <div class="feature-heading">
+          <p>FEATURES</p>
 
-    <div class="trust">
-      <p>
-        Trusted by Students & Dreamers.
-      </p>
-    </div>
+          <h2>Everything you need to make progress.</h2>
+        </div>
 
-    <div class="preview">
-      <p>
-        RESET Dashboard Preview
-      </p>
-    </div>
+        <div class="feature-container">
+          <!-- Feature 1 -->
 
-  </div>
-  </section>
+          <article class="feature-card">
+            <div class="feature-icon">🎯</div>
+            <h3>Track Anything</h3>
+            <p>
+              Track habits, study sessions, workouts, personal goals, or
+              anything else that matter to you.
+            </p>
+          </article>
 
-  <!-- features section  -->
+          <!-- Feature 2 -->
 
-<section class="page" id="features">
+          <article class="feature-card">
+            <div class="feature-icon">🔥</div>
 
-  <div class="feature-heading">
+            <h3>Build Streaks</h3>
 
-    <p>
-      FEATURES
-    </p>
+            <p>
+              Stay consistent and build powerful streaks that keep you motivated
+              everyday.
+            </p>
+          </article>
 
-      <h2>
-        Everything you need to make progress.
-      </h2>
-    </div>
+          <!-- Feature 3 -->
 
-  <div class="feature-container">
+          <article class="feature-card">
+            <div class="feature-icon">📊</div>
 
-      <!-- Feature 1 -->
+            <h3>Analyze Progress</h3>
 
-     <article class="feature-card">
+            <p>
+              Understand your performance with statistics, progress tracking,
+              and useful insights.
+            </p>
+          </article>
 
-      <div class="feature-icon">
-        🎯
+          <!-- Feature 4 -->
+
+          <article class="feature-card">
+            <div class="feature-icon">🏆</div>
+
+            <h3>Achieve More</h3>
+
+            <p>
+              Reach milestones, maintain Consistency, and become better
+              everyday.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- How it works -->
+
+      <section class="page" id="work">
+        <div class="section-heading">
+          <p>HOW IT WORKS</p>
+
+          <h2>Simple system. Real progress.</h2>
+
+          <div class="steps">
+            <!-- step 1 -->
+
+            <article class="step">
+              <span class="step-number"> 01 </span>
+
+              <h3>Create a Goal</h3>
+
+              <p>Create a goal based on what you want to improve or achieve.</p>
+            </article>
+
+            <!-- step 2 -->
+
+            <article class="step">
+              <span class="step-number"> 02 </span>
+
+              <h3>Check in Everyday</h3>
+
+              <p>Record your daily progress and stay accountable.</p>
+            </article>
+
+            <!-- step 3 -->
+
+            <article class="step">
+              <span class="step-number"> 03 </span>
+
+              <h3>Analyze your progress</h3>
+
+              <p>Use statistics and insights to understand your habits.</p>
+            </article>
+
+            <!-- step 4 -->
+
+            <article class="step">
+              <span class="step-number"> 04 </span>
+
+              <h3>Keep Improving</h3>
+
+              <p>
+                Build consistency, reach milestones, and continue moving
+                forward.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Benefits -->
+
+      <section class="page" id="benefits">
+        <div class="benefit-content">
+          <p>WHY RESET?</p>
+
+          <h2>Progress becomes easier when you can see it.</h2>
+
+          <p>
+            RESET turns your everyday actions into measurable progress so you
+            can understand what's working and where you can improve.
+          </p>
+        </div>
+
+        <div class="benefits-list">
+          <div class="benefit">✓ One place for all your goals</div>
+
+          <div class="benefit">✓ Daily accountability</div>
+
+          <div class="benefit">✓ Automatic streak tracking</div>
+
+          <div class="benefit">✓ Detailed progress statistics</div>
+
+          <div class="benefit">✓ Personalized insights</div>
+
+          <div class="benefit">✓ Milestones and achievements</div>
+        </div>
+      </section>
+
+      <!-- Testimonials -->
+
+      <section class="page" id="testimonials">
+        <div class="testimonial-heading">
+          <p>TESTIMONIALS</p>
+
+          <h2>Progress feels better together.</h2>
+        </div>
+
+        <div class="testimonial-container">
+          <!-- Testimonial 1 -->
+          <article class="testimonial">
+            <p>
+              "RESET helped me to stay consistent with my daily study goals."
+            </p>
+
+            <h3>Student</h3>
+          </article>
+
+          <!-- Testimonial 1 -->
+          <article class="testimonial">
+            <p>
+              "Seeing my streak and progress every day keeps me accountable."
+            </p>
+
+            <h3>Developer</h3>
+          </article>
+
+          <!-- Testimonial 1 -->
+          <article class="testimonial">
+            <p>
+              "Simple tracking made it much easier to understand my habits."
+            </p>
+
+            <h3>User</h3>
+          </article>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+
+      <section class="page" id="faq">
+        <div class="faq-heading">
+          <p>FAQ</p>
+
+          <h2>Frequently Asked Questions</h2>
+        </div>
+
+        <div class="faq-container">
+          <details>
+            <summary>What can I track with RESET?</summary>
+
+            <p>
+              You can track habits, study goals, fitness, learning, personal
+              development, recovery goals, and custom goals.
+            </p>
+          </details>
+
+          <details>
+            <summary>Can I create multiple goals?</summary>
+
+            <p>
+              Yes. You can create and track multiple goals at the same time.
+            </p>
+          </details>
+
+          <details>
+            <summary>Does RESET track my streak automatically?</summary>
+
+            <p>
+              Yes. Your streaks and statistics are calculated automatically from
+              your daily check-ins.
+            </p>
+          </details>
+
+          <details>
+            <summary>Can I create my own type of goal</summary>
+
+            <p>RESET is designed to support flexible and customizable goals.</p>
+          </details>
+        </div>
+      </section>
+
+      <!-- Get Started -->
+
+      <section class="page" id="get-started">
+        <h2>Start building a better version of yourself.</h2>
+
+        <p>One day. One habit. One step at a time.</p>
+
+        <a href="#login" class="primary-btn"> Get Started </a>
+      </section>
+    </main>
+
+    <!-- Footer -->
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h2>RESET</h2>
+
+          <p>Track. Improve. Transform.</p>
+        </div>
+
+        <div class="footer-links">
+          <a href="#features"> Features </a>
+
+          <a href="#work"> How It Works </a>
+
+          <a href="#benefits"> Benefits </a>
+
+          <a href="#faq"> FAQ </a>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© 2026 RESET. All rights reserved.</p>
+
+          <p>Built for progress.</p>
+        </div>
       </div>
-       <h3>
-          Track Anything
-        </h3>
-        <p>
-          Track habits, study sessions, workouts, personal goals, or anything else that matter to you.
-        </p>
-     </article>
-
-      <!-- Feature 2 -->
-
-     <article class="feature-card">
-
-      <div class="feature-icon">
-        🔥
-      </div>
-
-      <h3>
-        Build Streaks
-      </h3>
-
-      <p>
-        Stay consistent and build powerful streaks that keep you motivated everyday.
-      </p>
-
-     </article>
-
-      <!-- Feature 3 -->
-
-     <article class="feature-card">
-
-      <div class="feature-icon">
-        📊
-      </div>
-
-      <h3>
-        Analyze Progress
-      </h3>
-
-      <p>
-        Understand your performance with statistics, progress tracking, and useful insights.
-      </p>
-
-     </article>
-
-      <!-- Feature 4 -->
-
-     <article class="feature-card">
-
-      <div class="feature-icon">
-         🏆
-      </div>
-
-      <h3>
-        Achieve More
-      </h3>
-
-      <p>
-        Reach milestones, maintain Consistency, and become better everyday.
-      </p>
-
-     </article>
-
-    </div>
-
-  </section>
-
-  <!-- How it works -->
-
-<section class="page" id="work">
-
-  <div class="section-heading">
-
-    <p>
-      HOW IT WORKS
-    </p>
-
-    <h2>
-      Simple system. Real progress.
-    </h2>
-
-    <div class="steps">
-
-      <!-- step 1 -->
-
-      <article class="step">
-
-        <span class="step-number">
-          01
-        </span>
-
-      <h3>
-        Create a Goal
-      </h3>
-      
-      <p>Create a goal based on what you
-        want to improve or achieve.
-      </p>
-
-      </article>
-
-      <!-- step 2 -->
-
-      <article class="step">
-
-        <span class="step-number">
-          02
-        </span>
-
-      <h3>
-        Check in Everyday
-      </h3>
-
-      <p>
-        Record your daily progress and
-        stay accountable.
-      </p>
-
-      </article>
-
-      <!-- step 3 -->
-
-      <article class="step">
-
-        <span class="step-number">
-          03
-        </span>
-
-      <h3>
-        Analyze your progress
-      </h3>
-
-      <p>
-        Use statistics and insights to
-        understand your habits.
-      </p>
-
-      </article>
-
-      <!-- step 4 -->
-
-      <article class="step">
-
-        <span class="step-number">
-          04
-        </span>
-
-        <h3>
-          Keep Improving
-        </h3>
-
-        <p>
-          Build consistency, reach milestones, and
-          continue moving forward.
-        </p>
-
-      </article>
-  
-    </div>
-    
-  </div>
-</section>
-
-<!-- Benefits -->
-
-<section class="page" id="benefits">
-
-  <div class="benefit-content">
-
-    <p>
-      WHY RESET?
-    </p>
-
-    <h2>
-      Progress becomes easier when you can see it.
-    </h2>
-
-    <p>
-      RESET turns your everyday actions into
-      measurable progress so you can understand
-      what's working and where you can improve.
-    </p>
-
-  </div>
-
-  <div class="benefits-list">
-
-    <div class="benefit">
-      ✓ One place for all your goals
-    </div>
-
-    <div class="benefit">
-      ✓ Daily accountability
-    </div>
-
-    <div class="benefit">
-      ✓ Automatic streak tracking
-    </div>
-
-    <div class="benefit">
-      ✓ Detailed progress statistics
-    </div>
-
-    <div class="benefit">
-      ✓ Personalized insights
-    </div>
-
-    <div class="benefit">
-      ✓ Milestones and achievements
-    </div>
-
-
-  </div>
-
-
-</section>
-
-<!-- Testimonials -->
-
-<section  class="page" id="testimonials">
-
-  <div class="testimonial-heading">
-
-     <p>
-      TESTIMONIALS
-     </p>
-
-     <h2>
-      Progress feels better together.
-     </h2>
-
-  </div>
-
-  <div class="testimonial-container">
-
-    <!-- Testimonial 1 -->
-    <article class="testimonial">
-
-      <p>
-        "RESET helped me to stay consistent with
-        my daily study goals."
-      </p>
-
-      <h3>
-        Student
-      </h3>
-
-    </article>
-
-    <!-- Testimonial 1 -->
-    <article class="testimonial">
-
-      <p>
-        "Seeing my streak and progress every day
-        keeps me accountable."
-      </p>
-
-      <h3>
-        Developer
-      </h3>
-
-    </article>
-
-    <!-- Testimonial 1 -->
-    <article class="testimonial">
-
-      <p>
-        "Simple tracking made it much easier
-        to understand my habits."
-      </p>
-
-      <h3>
-        User
-      </h3>
-
-    </article>
-
-  </div> 
-
-</section>
-
-<!-- FAQ -->
-
-<section class="page" id="faq">
-
-  <div class="faq-heading">
-
-    <p>
-      FAQ
-    </p>
-
-    <h2>
-      Frequently Asked Questions
-    </h2>
-
-  </div>
-
-  <div class="faq-container">
-  
-    <details>
-
-      <summary>
-        What can I track with RESET?
-      </summary>
-
-      <p>
-        You can track habits, study goals,
-        fitness, learning, personal development,
-        recovery goals, and custom goals.
-      </p>
-      
-    </details>
-
-    <details>
-
-      <summary>
-        Can I create multiple goals?
-      </summary>
-
-      <p>
-        Yes. You can create and track multiple
-        goals at the same time.
-      </p>
-
-    </details>
-
-    <details>
-
-      <summary>
-          Does RESET track my streak automatically?
-      </summary>
-
-      <p>
-        Yes. Your streaks and statistics are
-        calculated automatically from your
-        daily check-ins.
-      </p>
-
-    </details>
-
-    <details>
-
-      <summary>
-        Can I create my own type of goal
-      </summary>
-
-      <p>
-        RESET is designed to support flexible
-        and customizable goals.
-      </p>
-
-    </details>
-
-  </div>
-
-</section>
-
-<!-- Get Started -->
-
-<section class="page" id="get-started">
-
-<h2>
-  Start building a better version of yourself.
-</h2>
-
-<p>
-  One day. One habit. One step at a time.
-</p>
-
-<a href="#login" class="primary-btn">
-  Get Started
-</a>
-
-</section>
-</main>
-
-<!-- Footer -->
- 
-<footer>
-
-  <div class="footer-content">
-
-    <div class="footer-brand">
-
-      <h2>
-        RESET
-      </h2>
-
-      <p>
-        Track. Improve. Transform.
-      </p>
-
-    </div>
-
-    <div class="footer-links">
-
-      <a href="#features">
-        Features
-      </a>
-
-      <a href="#work">
-        How It Works
-      </a>
-
-      <a href="#benefits">
-        Benefits
-      </a>
-
-      <a href="#faq">
-        FAQ
-      </a>
-
-    </div>
-
-    <div class="footer-bottom">
-
-      <p>
-        © 2026 RESET. All rights reserved.
-      </p>
-
-      <p>
-        Built for progress.
-      </p>
-
-    </div>
-
-  </div>
-
-</footer>
-
-</body>
-
+    </footer>
+
+    <!-- Java Script -->
+
+    <script>
+      const navLinks = document.querySelectorAll("[data-page]");
+      const pages = document.querySelectorAll(".page");
+
+      navLinks.forEach((link) => {
+        link.addEventListener("click", (event) => {
+          event.preventDefault();
+          const targetPage = link.dataset.page;
+
+          page.forEach((page) => {
+            page.classList.remove("active");
+          });
+
+          const selectedPage = document.getElementById(targetPage);
+          selectedPage.classList.add("active");
+        });
+      });
+    </script>
+  </body>
 </html>
