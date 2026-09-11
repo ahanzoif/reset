@@ -101,9 +101,13 @@
           </p>
 
           <div class="hero-buttons">
-            <a href="#get-started" class="primary-btn"> Get Started </a>
+            <a href="#get-started" class="primary-btn" data-page="get-started">
+              Get Started
+            </a>
 
-            <a href="#work" class="secondary-btn"> See How It Works </a>
+            <a href="#work" class="secondary-btn" data-page="work">
+              See How It Works
+            </a>
           </div>
 
           <div class="trust">
@@ -387,37 +391,28 @@
     <!-- Java Script -->
 
     <script>
+      const navLinks = document.querySelectorAll("[data-page]");
+      const pages = document.querySelectorAll(".page");
 
-  const navLinks = document.querySelectorAll("[data-page]");
-  const pages = document.querySelectorAll(".page");
+      navLinks.forEach((link) => {
+        link.addEventListener("click", (event) => {
+          event.preventDefault();
 
+          const targetPage = link.dataset.page;
 
-  navLinks.forEach((link) => {
+          // Hide all pages
+          pages.forEach((page) => {
+            page.classList.remove("active");
+          });
 
-    link.addEventListener("click", (event) => {
+          // Show selected page
+          const selectedPage = document.getElementById(targetPage);
 
-      event.preventDefault();
-
-      const targetPage = link.dataset.page;
-
-
-      // Hide all pages
-      pages.forEach((page) => {
-        page.classList.remove("active");
+          if (selectedPage) {
+            selectedPage.classList.add("active");
+          }
+        });
       });
-
-
-      // Show selected page
-      const selectedPage = document.getElementById(targetPage);
-
-      if (selectedPage) {
-        selectedPage.classList.add("active");
-      }
-
-    });
-
-  });
-
-</script>
+    </script>
   </body>
 </html>
