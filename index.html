@@ -387,22 +387,37 @@
     <!-- Java Script -->
 
     <script>
-      const navLinks = document.querySelectorAll("[data-page]");
-      const pages = document.querySelectorAll(".page");
 
-      navLinks.forEach((link) => {
-        link.addEventListener("click", (event) => {
-          event.preventDefault();
-          const targetPage = link.dataset.page;
+  const navLinks = document.querySelectorAll("[data-page]");
+  const pages = document.querySelectorAll(".page");
 
-          page.forEach((page) => {
-            page.classList.remove("active");
-          });
 
-          const selectedPage = document.getElementById(targetPage);
-          selectedPage.classList.add("active");
-        });
+  navLinks.forEach((link) => {
+
+    link.addEventListener("click", (event) => {
+
+      event.preventDefault();
+
+      const targetPage = link.dataset.page;
+
+
+      // Hide all pages
+      pages.forEach((page) => {
+        page.classList.remove("active");
       });
-    </script>
+
+
+      // Show selected page
+      const selectedPage = document.getElementById(targetPage);
+
+      if (selectedPage) {
+        selectedPage.classList.add("active");
+      }
+
+    });
+
+  });
+
+</script>
   </body>
 </html>
