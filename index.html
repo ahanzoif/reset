@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f8fafc" />
+    <meta name="description" content="A simple, private daily habit tracker." />
+    <title>RESET — Daily Habit Tracker</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="#top" aria-label="RESET home"
+          ><span class="brand-mark">R</span
+          ><span>reset<span class="brand-dot">.</span></span></a
+        >
+        <span class="local-badge"
+          ><span class="status-dot"></span> Saved on this device</span
+        >
+      </header>
+
+      <main id="top">
+        <section class="welcome">
+          <div>
+            <p class="eyebrow" id="today-label">YOUR DAILY RESET</p>
+            <h1>Small steps.<br /><span>Real progress.</span></h1>
+            <p class="welcome-copy">
+              Build routines that fit your life. One day at a time.
+            </p>
+          </div>
+          <div class="date-card">
+            <span class="date-icon" aria-hidden="true">✳</span
+            ><span id="date-full">Today</span>
+          </div>
+        </section>
+
+        <section class="summary-grid" aria-label="Today's summary">
+          <article class="summary-card progress-card">
+            <div class="summary-top">
+              <span>Today's progress</span
+              ><span class="summary-icon purple">↗</span>
+            </div>
+            <div class="progress-row">
+              <strong id="progress-percent">0%</strong
+              ><span id="progress-count">0 of 0 done</span>
+            </div>
+            <div
+              class="progress-track"
+              role="progressbar"
+              aria-label="Today's progress"
+              aria-valuemin="0"
+              aria-valuemax="100"
+              aria-valuenow="0"
+              id="progress-bar"
+            >
+              <span id="progress-fill"></span>
+            </div>
+          </article>
+          <article class="summary-card">
+            <div class="summary-top">
+              <span>Habits for today</span
+              ><span class="summary-icon blue">✓</span>
+            </div>
+            <strong class="summary-number" id="today-total">0</strong>
+            <p class="summary-note">Scheduled for today</p>
+          </article>
+          <article class="summary-card">
+            <div class="summary-top">
+              <span>Completed this week</span
+              ><span class="summary-icon green">✦</span>
+            </div>
+            <strong class="summary-number" id="week-total">0</strong>
+            <p class="summary-note">Check-ins this week</p>
+          </article>
+        </section>
+
+        <section class="content-grid">
+          <section class="panel habits-panel" aria-labelledby="habits-heading">
+            <div class="panel-heading">
+              <div>
+                <p class="eyebrow">SHOW UP FOR YOURSELF</p>
+                <h2 id="habits-heading">Today's habits</h2>
+              </div>
+              <span class="count-pill" id="habit-count">0 habits</span>
+            </div>
+            <div id="habit-list" class="habit-list" aria-live="polite"></div>
+            <div id="empty-state" class="empty-state">
+              <div class="empty-art">✳</div>
+              <h3>Your fresh start begins here</h3>
+              <p>Add your first habit and make today count.</p>
+              <button
+                class="button button-primary"
+                id="empty-add-button"
+                type="button"
+              >
+                ＋ Add your first habit
+              </button>
+            </div>
+          </section>
+
+          <aside
+            class="panel add-panel"
+            id="add-habit-panel"
+            aria-labelledby="add-heading"
+          >
+            <div class="panel-heading">
+              <div>
+                <p class="eyebrow">MAKE IT A ROUTINE</p>
+                <h2 id="add-heading">Add a habit</h2>
+              </div>
+              <span class="add-symbol">＋</span>
+            </div>
+            <form id="habit-form">
+              <label for="habit-name">Habit name</label>
+              <input
+                id="habit-name"
+                name="name"
+                type="text"
+                maxlength="60"
+                placeholder="e.g. Solve 3 DSA problems"
+                required
+              />
+              <label for="habit-category"
+                >Category <span class="optional">(optional)</span></label
+              >
+              <select id="habit-category" name="category">
+                <option value="Personal">Personal</option>
+                <option value="Study">Study</option>
+                <option value="Coding">Coding</option>
+                <option value="Health">Health & fitness</option>
+                <option value="Mindfulness">Mindfulness</option>
+                <option value="Other">Other</option>
+              </select>
+              <fieldset class="weekday-field">
+                <legend>Repeat on</legend>
+                <div class="weekday-options" id="weekday-options">
+                  <label class="day-option"
+                    ><input type="checkbox" value="1" checked /><span
+                      >Mon</span
+                    ></label
+                  ><label class="day-option"
+                    ><input type="checkbox" value="2" checked /><span
+                      >Tue</span
+                    ></label
+                  ><label class="day-option"
+                    ><input type="checkbox" value="3" checked /><span
+                      >Wed</span
+                    ></label
+                  ><label class="day-option"
+                    ><input type="checkbox" value="4" checked /><span
+                      >Thu</span
+                    ></label
+                  ><label class="day-option"
+                    ><input type="checkbox" value="5" checked /><span
+                      >Fri</span
+                    ></label
+                  ><label class="day-option"
+                    ><input type="checkbox" value="6" /><span>Sat</span></label
+                  ><label class="day-option"
+                    ><input type="checkbox" value="0" /><span>Sun</span></label
+                  >
+                </div>
+              </fieldset>
+              <p class="form-error" id="form-error" role="alert"></p>
+              <button class="button button-primary submit-button" type="submit">
+                ＋ Create habit
+              </button>
+              <p class="privacy-note">
+                <span aria-hidden="true">▣</span> Your habits stay in this
+                browser on this device.
+              </p>
+            </form>
+          </aside>
+        </section>
+
+        <section class="panel week-panel" aria-labelledby="week-heading">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">CONSISTENCY OVER PERFECTION</p>
+              <h2 id="week-heading">This week</h2>
+            </div>
+            <span class="week-caption" id="week-caption"></span>
+          </div>
+          <div
+            class="week-strip"
+            id="week-strip"
+            aria-label="Weekly habit completion"
+          ></div>
+        </section>
+        <footer>
+          <span class="footer-brand">reset<span class="brand-dot">.</span></span
+          ><span>Progress. Discipline. Freedom.</span
+          ><button type="button" id="export-button" class="text-button">
+            Export my data
+          </button>
+        </footer>
+        <p
+          id="app-message"
+          class="sr-only"
+          role="status"
+          aria-live="polite"
+        ></p>
+      </main>
+    </div>
+
+    <dialog id="delete-dialog" class="confirm-dialog">
+      <form method="dialog">
+        <div class="dialog-mark">?</div>
+        <h2>Delete this habit?</h2>
+        <p>
+          This removes the habit and its check-in history from this browser.
+          This can't be undone.
+        </p>
+        <div class="dialog-actions">
+          <button class="button button-secondary" value="cancel">
+            Keep habit</button
+          ><button
+            class="button button-danger"
+            id="confirm-delete"
+            value="delete"
+          >
+            Delete habit
+          </button>
+        </div>
+      </form>
+    </dialog>
+  </body>
+</html>
