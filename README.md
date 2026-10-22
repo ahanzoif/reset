@@ -1,5 +1,7 @@
 # RESET — Simple Daily Habit Tracker
 
+**Live Preview:** [Open RESET](https://reset-omega-neon.vercel.app/)
+
 A small personal-use habit tracker built with plain HTML, CSS, and JavaScript. No framework, backend, database, account, build step, or installation is required.
 
 ## Run locally
